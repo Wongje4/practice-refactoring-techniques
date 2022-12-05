@@ -6,11 +6,14 @@ public class OwingPrinter {
     void printOwing(String name, List<Order> orders) {
         int outstanding = calculatingOutstanding(orders);
 
+        printTemplate(name, outstanding);
+    }
+
+    private void printTemplate(String name, int outstanding) {
         // print banner
         System.out.println ("*****************************");
         System.out.println ("****** Customer totals ******");
         System.out.println ("*****************************");
-
 
         // print details
         System.out.println("name: " + name);
