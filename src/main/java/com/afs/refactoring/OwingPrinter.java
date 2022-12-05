@@ -1,6 +1,5 @@
 package com.afs.refactoring;
 
-import java.util.Iterator;
 import java.util.List;
 
 public class OwingPrinter {
@@ -19,14 +18,11 @@ public class OwingPrinter {
     }
 
     private int calculatingOutstanding(List<Order> orders) {
-        return calculatingOutstandingTemp(orders);
-    }
-
-    private int calculatingOutstandingTemp(List<Order> orders) {
         return orders.stream()
                 .mapToInt(order -> order.getAmount())
                 .sum();
     }
+
 }
 
 class Order {
