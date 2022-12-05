@@ -10,12 +10,10 @@ public class OwingPrinter {
     }
 
     private void printTemplate(String name, int outstanding) {
-        // print banner
+
         System.out.println ("*****************************");
         System.out.println ("****** Customer totals ******");
         System.out.println ("*****************************");
-
-        // print details
         System.out.println("name: " + name);
         System.out.println("amount: " + outstanding);
     }
